@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Nuramalia Putri</title>
+    <style>
+   /* 1. Reset & Gaya Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: blueviolet;
+            line-height: 1.5;
+        }
+
+        /* 2. Gaya Navigasi (Header) */
+        header {
+            background-color: blueviolet;
+            color: pink;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1abc9c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        /* 3. Gaya Struktur Section */
+        section {
+            padding: 100px 20px 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: #1abc9c;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 4. Hero Section (Halaman Depan) */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://picsum.photos/1920/1080') no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero-section span {
+            color: #1abc9c;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1abc9c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+        }
+
+        /* 5. About Section */
+        .about-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+            color: #555;
+        }
+
+        /* 6. Projects Section (Menggunakan Grid) */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-50px); /* Efek melayang sedikit */
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .project-info p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* 7. Contact Section */
+        .contact-section p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .contact-section a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 8. Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+   <!-- BAGIAN NAVIGASI -->
+    <header>
+        <nav>
+            <div class="logo">PortoKu</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BAGIAN HERO (HALAMAN DEPAN) -->
+    <section id="home" class="hero-section">
+        <h1>Halo, Saya <span>Nuramalia Putri</span></h1>
+        <p>Seorang Web Developer Pemula yang sedang bersemangat membuat karya-karya keren berbasis web.</p>
+        <a href="#projects" class="btn">Lihat Proyek Saya</a>
+    </section>
+
+    <!-- BAGIAN ABOUT (TENTANG SAYA) -->
+    <section id="about" class="about-section">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah seorang pelajar/mahasiswa yang tertarik dengan dunia pemrograman web. 
+            Saat ini saya sedang mempelajari dasar-dasar pengembangan front-end seperti HTML dan CSS. 
+            Saya suka mengubah ide kreatif menjadi tampilan website yang nyata dan fungsional.
+        </p>
+    </section>
+
+    <!-- BAGIAN PROJECTS (DAFTAR KARYA) -->
+    <section id="projects" class="projects-section">
+        <h2>Proyek Terbaru</h2>
+        
+        <div class="project-grid">
+            <!-- Kartu Proyek 1 -->
+            <div class="project-card">
+                <div class="project-img" style="background: #34495e; color: #fff;">Proyek 1</div>
+                <div class="project-info">
+                    <h3>Website Landing Page</h3>
+                    <p>Membuat halaman arahan (landing page) produk menggunakan HTML murni dan hiasan CSS dasar.</p>
+                </div>
+            </div>
+
+            <!-- Kartu Proyek 2 -->
+            <div class="project-card">
+                <div class="project-img" style="background: #e67e22; color: #fff;">Proyek 2</div>
+                <div class="project-info">
+                    <h3>Kalkulator Web Mini</h3>
+                    <p>Aplikasi hitung-hitungan sederhana untuk melatih struktur logika elemen pada halaman web.</p>
+                </div>
+            </div>
+
+            <!-- Kartu Proyek 3 -->
+            <div class="project-card">
+                <div class="project-img" style="background: #9b59b6; color: #fff;">Proyek 3</div>
+                <div class="project-info">
+                    <h3>Formulir Pendaftaran</h3>
+                    <p>Desain halaman formulir interaktif lengkap dengan validasi input sederhana dan tombol submit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGIAN CONTACT (KONTAK) -->
+    <section id="contact" class="contact-section">
+        <h2>Hubungi Saya</h2>
+        <p>Tertarik untuk bekerja sama atau sekadar menyapa? Silakan hubungi saya melalui email:</p>
+        <p><a href="mailto:emailkamu@gmail.com">emailkamu@gmail.com</a></p>
+    </section>
+
+    <!-- BAGIAN FOOTER -->
+    <footer>
+        <p>&copy; 2026 PortoKu. Dibuat dengan Semangat Belajar.</p>
+    </footer>
+</body>
+</html>
