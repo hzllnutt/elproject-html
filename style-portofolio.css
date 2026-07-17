@@ -46,3 +46,19 @@ nav a:hover{
     background-size: cover;
     background-attachment: fixed;
 }
+.img-profile{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.content{
+    background-color: violet;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 40%;
+}
+.content h1{
+    font-size: 2rem;
+}
